@@ -2,7 +2,9 @@
 
 A Windows app that finds, downloads, safety-checks and installs **The Sims 4** custom content, and lets you manage it in a picture gallery.
 
-> Unofficial fan tool. Not affiliated with or endorsed by Electronic Arts, Maxis, Patreon or CurseForge/Overwolf.
+Made with love for my girlfriend. ❤️
+
+> Unofficial fan tool. Not affiliated with or endorsed by Electronic Arts, Maxis, Patreon, CurseForge/Overwolf or GameTimeDev.
 
 ## Download
 
@@ -16,16 +18,27 @@ SimSolution checks this page on startup and tells you when a newer version is ou
 
 ## Features
 
+- **Patreon creators**:
+  - List creators one per line and see how many posts they have, how many are downloadable and how many are members-only.
+  - Preview-only posts are hidden, and results are remembered between sessions.
+  - **Add all new from <creator>** queues and starts everything you don't have yet. Mods you deleted are skipped.
+  - Only **public/free** posts are supported; there is no login.
 - **CurseForge search**: filter by section (Create a Sim, Build/Buy, Mods, ...), category and game version, and sort by popularity, downloads, latest update and more.
-- **Patreon creators**: list creators one per line and see how many posts they have, how many are downloadable and how many are members-only. Browse their content and queue everything you don't have yet with **Add all new**. Only **public/free** posts are supported; there is no login.
+- **Install from file**: pick a `.zip`, `.7z`, `.package` or `.ts4script` you downloaded yourself. It goes through the same safety checks.
 - **Safety checks before anything touches your Mods folder**:
-  - Only Sims 4 file types are installed (`.package`, `.ts4script`, `.cfg`).
-  - Files are checked by content, not just name, so renamed executables are caught.
-  - Script mods (`.ts4script`) are scanned for risky code (running programs, network access, etc.) and quarantined unless you trust the creator.
-  - Anything suspicious goes to a quarantine folder and is never installed.
-- **Library gallery**: a picture grid of installed packs. Turn packs off or on without deleting them; disabled packs are moved out of Mods.
+  - Only Sims 4 content is installed: `.package`, `.ts4script`, `.cfg`, plus Gallery Tray files (lots, rooms, households), which go into your `Tray` folder.
+  - Files are checked by content, not just name, so disguised programs are caught.
+  - Script mods (`.ts4script`) are scanned for risky code (running programs, network access, etc.).
+  - Programs and scripts (`.exe`, `.dll`, `.bat`, `.py`, ...) go to a quarantine folder and are never installed.
+  - Harmless non-Sims files (readmes, images, other data) are simply left out.
+- **Library gallery**:
+  - A picture grid of your installed packs, with the total size of your custom content.
+  - Turn packs off and on, or select several and enable, disable or delete them at once.
+  - Use **Import Mods folder** to add mods you already had.
+  - The **Deleted** list remembers what you removed so it's never downloaded again, and you can manage it.
+- **Works alongside Sims 4 Mod Manager (S4MM)**: turning mods off uses the same `.packageOFF` / `.ts4scriptOFF` renaming, so both apps always agree on what's on or off.
 - Finds your Mods folder automatically (including OneDrive-redirected Documents).
-- Detects duplicates, backs up any file it replaces, checks for updates, and offers to clear the game's thumbnail cache.
+- Detects duplicates, backs up any file it replaces or deletes, checks for updates, and offers to clear the game's thumbnail cache.
 
 The safety checks reduce risk but can't guarantee a file is safe. Only install content from creators you trust.
 
@@ -35,7 +48,13 @@ CurseForge search needs a free personal API key from the [CurseForge for Studios
 
 ## Privacy
 
-There is no telemetry and no accounts. The app only talks to CurseForge, Patreon, file hosts you download from, and GitHub (for the update check). Errors are written to a local log file, `simsolution.log` in the app's data folder, which you can attach to an issue yourself.
+There is no telemetry and no accounts. The app only talks to CurseForge, Patreon, file hosts you download from, and GitHub (for the update check).
+
+## Reporting a problem
+
+**Please include your log file (`simsolution.log`) with every issue.** Without it, problems are very hard to track down.
+
+Logs are in `%LOCALAPPDATA%\SimSolution\logs` (**Settings → Open log folder**): `simsolution.log` and, after a hard crash, `crash.log`. Download links are stripped of their access tokens before being written, so you can attach the logs to a GitHub issue. Check them before sharing anyway: they contain your Windows user folder paths.
 
 ## Requirements
 
