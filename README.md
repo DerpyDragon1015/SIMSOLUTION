@@ -14,9 +14,11 @@ Made with love for my girlfriend. ❤️
 
 Windows may show a SmartScreen warning because the exe isn't code-signed: click **More info → Run anyway**.
 
-SimSolution checks this page on startup and tells you when a newer version is out. It never updates itself.
+SimSolution checks for new versions on startup. If you agree, it downloads the update, verifies it, and restarts into it. Your shortcuts follow along automatically.
 
 ## Features
+
+- **A friendly interface with 8 colour themes**: 💎 Plumbob, 🍬 Bubblegum, 🌸 Cotton Candy, 🌙 Midnight, 🌅 Sunset, 💜 Lavender, 🌿 Mint, ☕ Llama Latte. Switch instantly in Settings.
 
 - **Patreon creators**:
   - List creators one per line and see how many posts they have, how many are downloadable and how many are members-only.

@@ -1,6 +1,6 @@
 # Python packages SimSolution.exe is built with (Python 3.12, Windows x64).
 # Not needed to run the exe.
-ttkbootstrap==2.2.6
+PySide6==6.8.1
 httpx==0.28.1
 py7zr==1.1.4
 platformdirs==4.14.0
